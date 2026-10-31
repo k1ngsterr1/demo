@@ -1,0 +1,8 @@
+// Load a separate UI-test process without modifying the generated Expo project
+// or adding test-only keep rules to the release APK.
+gradle.settingsEvaluated { settings ->
+  def testDirectory = new File(settings.settingsDir, '../native-tests/android')
+  if (!testDirectory.isDirectory()) return // Ignore React Native / Expo included builds.
+  settings.include(':native-ui-tests')
+  settings.project(':native-ui-tests').projectDir = testDirectory
+}

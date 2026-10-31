@@ -1,0 +1,11 @@
+{
+  "name": "statement-import-submission",
+  "private": true,
+  "scripts": {
+    "mock": "npm --prefix kit start",
+    "test": "npm --prefix kit test && npm --prefix client test",
+    "check": "npm --prefix client run check",
+    "fixtures:oversize": "npm --prefix kit run fixtures:oversize",
+    "verify:kit": "node scripts/verify-kit.mjs"
+  }
+}

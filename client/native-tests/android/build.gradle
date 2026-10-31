@@ -1,0 +1,36 @@
+apply plugin: 'com.android.test'
+
+android {
+  namespace 'dev.synthetic.qa'
+  compileSdk 36
+  targetProjectPath = ':app'
+  experimentalProperties['android.experimental.self-instrumenting'] = true
+
+  defaultConfig {
+    minSdk 24
+    targetSdk 36
+    testInstrumentationRunner 'androidx.test.runner.AndroidJUnitRunner'
+  }
+  buildTypes {
+    release {
+      debuggable true
+      signingConfig signingConfigs.debug
+    }
+  }
+  sourceSets.main {
+    java.srcDirs = ['src']
+    manifest.srcFile 'AndroidManifest.xml'
+  }
+}
+
+androidComponents {
+  beforeVariants(selector().all()) { variant ->
+    variant.enabled = variant.buildType == 'release'
+  }
+}
+
+dependencies {
+  implementation 'androidx.test:runner:1.6.2'
+  implementation 'androidx.test.ext:junit:1.2.1'
+  implementation 'androidx.test.uiautomator:uiautomator:2.3.0'
+}

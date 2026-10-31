@@ -1,0 +1,65 @@
+{
+  "expo": {
+    "name": "Statement Import",
+    "slug": "statement-import",
+    "scheme": "statement-import",
+    "version": "1.0.0",
+    "orientation": "portrait",
+    "userInterfaceStyle": "light",
+    "ios": {
+      "bundleIdentifier": "dev.synthetic.statementimport",
+      "supportsTablet": true,
+      "infoPlist": {
+        "NSAppTransportSecurity": {
+          "NSAllowsLocalNetworking": true,
+          "NSAllowsArbitraryLoads": true
+        },
+        "NSLocalNetworkUsageDescription": "Connect to the synthetic statement mock on your chosen local network.",
+        "ITSAppUsesNonExemptEncryption": false,
+        "UIStatusBarStyle": "UIStatusBarStyleLightContent"
+      }
+    },
+    "android": {
+      "package": "dev.synthetic.statementimport",
+      "blockedPermissions": [
+        "android.permission.READ_EXTERNAL_STORAGE",
+        "android.permission.WRITE_EXTERNAL_STORAGE",
+        "android.permission.RECORD_AUDIO",
+        "android.permission.SYSTEM_ALERT_WINDOW"
+      ],
+      "adaptiveIcon": {
+        "foregroundImage": "./assets/adaptive-icon.png",
+        "backgroundColor": "#CBF28B"
+      }
+    },
+    "plugins": [
+      "expo-document-picker",
+      "expo-file-system",
+      "./plugins/withLocalMock.cjs",
+      [
+        "expo-build-properties",
+        {
+          "android": {
+            "enableMinifyInReleaseBuilds": true,
+            "enableShrinkResourcesInReleaseBuilds": true,
+            "extraProguardRules": "# Expo SDK 55 reflection compatibility; upstream fixes: expo/expo#46852 and #51206.\n-keep interface expo.modules.kotlin.records.Record\n-keep @interface expo.modules.kotlin.records.Field { *; }"
+          }
+        }
+      ],
+      "./plugins/withAndroidReleaseOptimization.cjs",
+      [
+        "expo-splash-screen",
+        {
+          "backgroundColor": "#14271F",
+          "image": "./assets/splash-mark.png",
+          "imageWidth": 112,
+          "resizeMode": "contain"
+        }
+      ]
+    ],
+    "updates": {
+      "enabled": false
+    },
+    "icon": "./assets/app-icon.png"
+  }
+}

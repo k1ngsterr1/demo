@@ -1,0 +1,44 @@
+client/node_modules/
+client/.expo/
+client/ios/
+client/android/
+client/dist/
+client/coverage/
+client/native-tests/ios/Runner.xcodeproj/
+client/native-tests/android/build/
+evidence/*.xcresult/
+kit/.mock-state.json*
+kit/fixtures/oversize.csv
+evidence/*.log
+evidence/*.apk
+evidence/*.zip
+evidence/*-native.mp4
+.DS_Store
+
+# Local builds, diagnostics, recordings and release binaries are not source.
+node_modules/
+.expo/
+coverage/
+__pycache__/
+tmp/
+evidence/
+deliverables/
+docs/archive/
+
+# Historical local reports reference private diagnostic artifacts.
+docs/CUA_ACCEPTANCE_2026-10-30.md
+docs/ANDROID_R8.md
+docs/CANCELLATION_NOTICE_FIX.md
+docs/SPEC_RECHECK_2026-10-31.md
+
+# Credentials and signing material must remain local.
+.env
+.env.*
+!.env.example
+*.p8
+*.p12
+*.pem
+*.key
+*.mobileprovision
+*.keystore
+*.jks

@@ -1,0 +1,93 @@
+{
+  "verifiedOn": "2026-11-01",
+  "checks": {
+    "npm run verify:kit": {
+      "status": "PASS",
+      "originalFiles": 9
+    },
+    "npm run check": {
+      "status": "PASS",
+      "format": "PASS",
+      "architectureFiles": 40,
+      "typescript": "PASS",
+      "clientTestsPassed": 95,
+      "toolchainTestsPassed": 11
+    },
+    "npm --prefix kit test": {
+      "status": "PASS",
+      "testsPassed": 6
+    },
+    "npm audit --json (client)": {
+      "status": "PASS",
+      "totalVulnerabilities": 0
+    }
+  },
+  "apk": {
+    "file": "StatementImport-Android-Release-arm64-20261031T144355Z.apk",
+    "sha256": "1c0e57871adcceab0775c761b2aede0e577d7c36f3fd5a8d114d4405dfe017f5",
+    "sourceInputsMatch": true,
+    "sourceInputCount": 56,
+    "architecture": "arm64-v8a",
+    "signing": "test/debug",
+    "nativeBuildRepeatedForPublication": false
+  },
+  "appInputHashes": {
+    "client/App.tsx": "1e4f35b0395148045cc3c0f4c87d20b4a361a23c219baf6fa4ed87a23299fb6f",
+    "client/app.json": "d07cde5464adf2334ed96f13bd4765ecc253e727dec43cc8c3b4a25a17a2f554",
+    "client/assets/PHOSPHOR-LICENSE.txt": "a72debd9f5297dcc93b07cf655e22e187bf0a23e41efc0f15e94578bd8f3828a",
+    "client/assets/adaptive-icon.png": "26097d09b4bd519096cfb7cde4589756db3b50dba970ae3ad62018342896c3c3",
+    "client/assets/adaptive-icon.svg": "fd272582cb59b3bb532f9fb0c3eb9011c71e528e113033410d1a6c7a4145edb7",
+    "client/assets/app-icon.png": "e3c7d8eba0c2f3a5c21e5283c3d8db17f76231941e72e34cd23834267d34ec53",
+    "client/assets/app-icon.svg": "c926caf1af8112bbdf2ee71dc611140abeac99df842466d3313ce5e6b344e5fd",
+    "client/assets/splash-mark.png": "1036e191907a2451c5db3f9336dc4e57d9d21f11d3c87851431a2c16f9616a33",
+    "client/assets/splash-mark.svg": "9dc7471c5399831bc83ebde8353b69191bf7343be6e943ae73c54ceeccada771",
+    "client/index.ts": "af10e01cf5fa6d399a83829926cc80d935c1dca8fb01313ab7cb54aab84c028b",
+    "client/package-lock.json": "1b3dacb02d189fcc2a4de8876d8d97f95cc64a67726fb11df57564bdf5de9ab5",
+    "client/package.json": "baca7236e7abbc4960cd0676f54317d692fc2343e0084019c3974a040404f7d6",
+    "client/plugins/withAndroidReleaseOptimization.cjs": "dc158dd390eb44e16518f7fda89dc52ffc37c48b0ba4ec00c3c986a2b4c3263d",
+    "client/plugins/withLocalMock.cjs": "a1c8448c8dbf7d0f34c0aee86e40c84d89a1ffbf5f3963ad083118746cec70f5",
+    "client/scripts/check-architecture.mjs": "346ded3dcc96013b73c15f10acb3b5abe29cbe104b04642ccf9fbbb3f16c2928",
+    "client/scripts/patch-toolchain.mjs": "35092b93c36621c752325fdf2297928ea6901c5376c3d1dd3afc0b07a541f6af",
+    "client/scripts/toolchain.test.mjs": "a441589908156a2bc873083cf64435caa54a0a7c3fb0554de47aed21c4d1b290",
+    "client/src/app/AppRoot.tsx": "07b69a6f1be8db54695fb6107337df96c589d7def060e2bbc5903ddc603a4552",
+    "client/src/app/StartupScreen.tsx": "b59afabf798c193d1851e2a4693215aecd456fc69f0dd97ddc964e14ac0ea41d",
+    "client/src/app/services.ts": "c14545217b5278d574cdd0628b9c0971db82172c0eeed63fedb0a42e76f1202d",
+    "client/src/app/useAppEnvironment.ts": "4d9ed12964219475d5535d22936277ae9c037060e33db6e79fab79dabd7dfa17",
+    "client/src/core/api.ts": "b2a8711e452582a95c96ad1705cc2a042477cba095d42e2af85248767ebc7c3f",
+    "client/src/core/cancellations.ts": "bdb34ed8fc231b2b3e9317b02abeae05be5d9165e859c49ab990ec83110709ce",
+    "client/src/core/controller.ts": "a32c8e909d17a8d5f56a7b1ca75bb2cab1250c2217b7e097776da1d5c8992daa",
+    "client/src/core/model.ts": "918f3414b8b5de4ab88a5cf357c4ffaaa3dcaa94d4956231acbe89463dcbc197",
+    "client/src/core/validation.ts": "13a707ef8af6713acfb8c6b9e3598dc26f20ca9f3a4f0016df24689075d57710",
+    "client/src/features/import/ImportFlowContext.tsx": "a13193f046c6ce99509b47dde2a5fbd326266503a1d7c873d1d07dc6eace6044",
+    "client/src/features/import/ImportIllustration.tsx": "4640bb0c9dca528f5e1d3de9167e416ea611bfe67ed1234516d2314964ce36a2",
+    "client/src/features/import/ImportNavigator.tsx": "f2e859c5c05b7457ee4ccf876e6f71a36ffef1c448cb930d5c0df804a6749d32",
+    "client/src/features/import/ImportStates.tsx": "35d7a1fec4edfb30925fef23c2b10b23a77080179a39427bd92ce550bcc6c69c",
+    "client/src/features/import/UploadSteps.tsx": "4a7865e92678526fa4cf91c898968102e7259598b7e2e86dbb487f4bf80df3da",
+    "client/src/features/import/cancellationRecovery.ts": "04e0637673a6a771bddb74b8cd73ccb36c08489c8de507857d2b41ff1ba75ee2",
+    "client/src/features/import/navigation.ts": "5e22388234b9654d341e40039b45a758339375878262cda6bffa64f7a846723b",
+    "client/src/features/import/presentation.ts": "ce8c8aea1debc8d26f6cc22bf99c432af70e0c0ad0e86e9d4b8e8cbfcd0915ad",
+    "client/src/features/import/screens/CancelImportButton.tsx": "aed299e50cc332fc4c481c579a3e6864afabfb7804c37cfe91357fc9624cc87a",
+    "client/src/features/import/screens/CleanupScreen.tsx": "c96b27ef886c0a8fd1263caf313b95e2251d879cfaea1eb1c777ecf24bcf7dd5",
+    "client/src/features/import/screens/ConfirmationScreen.tsx": "c93971ffa09279a430f0a44137cc19dfc9fa8283942de8fdd45776c26f4e5337",
+    "client/src/features/import/screens/DeleteImportButton.tsx": "d474e3373ecaa3a6d95ec8f13788e21e0877a593b0253c6a7b2e220006b782ca",
+    "client/src/features/import/screens/DetailsScreen.tsx": "e9b81e50cb9b2392b81baf7322cffc9723ce475cd3dece309ee4431413ae4809",
+    "client/src/features/import/screens/ImportHomeScreen.tsx": "fdc25dd0cbb2676e4cf7e5029e7733d6db66042e15a0ff9a0e27cc8683cebc10",
+    "client/src/features/import/screens/ImportScreenLayout.tsx": "7442557cf01569076c8912b2b7de0292351bb4cf1d5d5429cd9f36e2c8a1f394",
+    "client/src/features/import/screens/ProcessingScreen.tsx": "59317bab4c0ae66c2b352b02856cfef189ca5d01695b7a0630545113b7ce9fe5",
+    "client/src/features/import/screens/ReportScreen.tsx": "42ee9dc10c5925b9d5cddeb6fa0fd00c9444e947b48fad814edc4becdd80edb8",
+    "client/src/features/import/screens/RestoreScreen.tsx": "2c19420757b521477d6c65556d9004b30b821be2e5c6833f7aa1422ff6f5e7a6",
+    "client/src/features/import/screens/SettingsScreen.tsx": "15be1c8ddf2289195168c7400a40495e7fc2e06d69f9a3cec74e3308a0cca250",
+    "client/src/features/import/services.ts": "21d5b58d559e717b2a87711e223948ec2333d66d6ae2fd03635f56eab8bda9f1",
+    "client/src/features/import/uploadStages.ts": "6b0004664d34c21ec668d177cf708748c22f4b9d35be5162ff862ff22674715c",
+    "client/src/features/import/useConfirmationBack.ts": "8fe2891466d7db2b53dcd6406ac4fe7280f44f52a4f70712659a6fb1861daf76",
+    "client/src/features/import/useImportFlow.ts": "e35998c08ce1d1698f028a6660ec87d85032f8368b38ed52ad428ef070bd6225",
+    "client/src/features/import/useServerSettings.ts": "f7bf30584f7e22cd8839334d97634c3b8f2fc3f2866af3e7918d44e3aaa74657",
+    "client/src/native/journal.ts": "14f43853af137e93ae12bbd6fdafce189caf6e7d62de3e4873d924bb1e03c2fc",
+    "client/src/native/runtime.ts": "8ab6647aa639b184cf95a5928b3db3794529213d124c598ac26159ae4bf16223",
+    "client/src/native/settings.ts": "6163df51011b8c9629cb1f8aabd6d35284c7ce62716a81a7eaddb58445aa3034",
+    "client/src/ui/components.tsx": "e15b3a05781e1615746323c3d3c16474f8347a2e4b19930742c87d2e045de8dd",
+    "client/src/ui/motion.tsx": "cff909f82399b14090fe307607b05e381ec75bcdfdd3c79f76d0b3f5544eca51",
+    "client/src/ui/theme.ts": "ea858135170f835077dd7aab1b475501bb8c7bc74d41dc768a02a9de1fc2e684"
+  },
+  "videoScope": "Native simulator/emulator acceptance recorded on 2026-10-31, before subsequent dependency and visual changes; not a full retest of latest UI or a physical iPhone walkthrough."
+}
