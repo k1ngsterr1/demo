@@ -89,5 +89,27 @@
     "client/src/ui/motion.tsx": "cff909f82399b14090fe307607b05e381ec75bcdfdd3c79f76d0b3f5544eca51",
     "client/src/ui/theme.ts": "ea858135170f835077dd7aab1b475501bb8c7bc74d41dc768a02a9de1fc2e684"
   },
-  "videoScope": "Native simulator/emulator acceptance recorded on 2026-10-31, before subsequent dependency and visual changes; not a full retest of latest UI or a physical iPhone walkthrough."
+  "videoScope": "Full native CUA recordings on 2026-11-01 cover the core acceptance matrix on iOS Simulator and Android Emulator. Android additionally shows PDF selection, confirmation scrolling and cancellation at 320x640 dp with fontScale 2.0. This is not a fresh full accessibility matrix or a physical-device video. Automated native recordings from 2026-10-31 remain supplemental.",
+  "demoVideos": [
+    {
+      "platform": "Android",
+      "file": "StatementImport-Android-Demo-20261101.mp4",
+      "url": "https://github.com/k1ngsterr1/demo/releases/download/v1.0.0/StatementImport-Android-Demo-20261101.mp4",
+      "durationSeconds": 232.266992,
+      "bytes": 36181162,
+      "sha256": "88902b116b4dd8ea029f7555f37c6e2f8d6229fcf4054956259f536e75029973",
+      "fullDecode": "PASS",
+      "nativeDeviceType": "emulator"
+    },
+    {
+      "platform": "iOS",
+      "file": "StatementImport-iOS-Demo-20261101.mp4",
+      "url": "https://github.com/k1ngsterr1/demo/releases/download/v1.0.0/StatementImport-iOS-Demo-20261101.mp4",
+      "durationSeconds": 171.0,
+      "bytes": 26274032,
+      "sha256": "24e3ed9e6523bda56ed5ee2c0623846815ba9f64021ee5aa079c03e19d381833",
+      "fullDecode": "PASS",
+      "nativeDeviceType": "simulator"
+    }
+  ]
 }
