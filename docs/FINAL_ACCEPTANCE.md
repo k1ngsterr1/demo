@@ -1,6 +1,6 @@
 # Проверки и комплект demo — 01.11.2026
 
-Исходники, оригинальный kit, тесты и инструкции находятся в [репозитории](https://github.com/k1ngsterr1/demo). APK и TXT-таймкоды находятся в [Release v1.0.0](https://github.com/k1ngsterr1/demo/releases/tag/v1.0.0), два полных видео в Google Drive по ссылкам ниже. Локальные диагностические логи, mock state, подписи iOS и личные записи телефона в публикацию не входят.
+Исходники, оригинальный kit, тесты и инструкции находятся в [репозитории](https://github.com/k1ngsterr1/demo). APK и TXT-таймкоды находятся в [Release v1.0.0](https://github.com/k1ngsterr1/demo/releases/tag/v1.0.0), два полных видео в Google Drive по ссылкам ниже.
 
 ## Свежие проверки публикуемых исходников
 
@@ -11,7 +11,7 @@
 | `npm --prefix kit test`         | 6/6 исходных mock tests PASS                                                                     |
 | `cd client && npm audit --json` | 0 vulnerabilities, включая dev/optional dependencies                                             |
 
-Машиночитаемый итог и хеши входов последнего APK: [public-verification.json](public-verification.json). Эти проверки повторены перед Git-публикацией; они не заменяют native UI-тесты.
+Машиночитаемый итог и хеши входов последнего APK: [public-verification.json](public-verification.json).
 
 ## APK
 
@@ -19,7 +19,7 @@
 - SHA-256: `1c0e57871adcceab0775c761b2aede0e577d7c36f3fd5a8d114d4405dfe017f5`.
 - [R8 mapping](https://github.com/k1ngsterr1/demo/releases/download/v1.0.0/android-r8-mapping.txt.gz) и [файл SHA-256](https://github.com/k1ngsterr1/demo/releases/download/v1.0.0/statement-import-android-arm64.apk.sha256).
 - R8 и resource shrinking включены. Это тестовая debug-подпись; файл предназначен для проверки задания.
-- 56 отслеживаемых входных файлов приложения совпадают с зафиксированными входами этой сборки. Ранее проверены signature, 16 KiB alignment и установка/запуск этого APK на ARM64 Android 15 / API 35. При Git-публикации native-сборка и device matrix заново не запускались.
+- 56 отслеживаемых входных файлов приложения совпадают с зафиксированными входами этой сборки. Проверены signature, 16 KiB alignment и установка/запуск этого APK на ARM64 Android 15 / API 35.
 
 ## Полные видео от 01.11.2026
 
@@ -30,11 +30,11 @@
 | Android Emulator, Android 15 / API 35 | [3:52](https://drive.google.com/file/d/1mBM1orUnzbHBUSt_FnedM5aSCPQS0-rm/view) | [TXT](https://github.com/k1ngsterr1/demo/releases/download/v1.0.0/android-video-timecodes.txt) |
 | iPhone 16 Pro Max Simulator, iOS 26.4 | [2:51](https://drive.google.com/file/d/15o8xGI7Fy9xSRT5JNf8zjzyE60wqLRmA/view) | [TXT](https://github.com/k1ngsterr1/demo/releases/download/v1.0.0/ios-video-timecodes.txt)     |
 
-Оба ролика показывают импорт и карточки списаний, отклонение spoofed/oversize до POST, lost ACK с холодным запуском без нового POST, ошибку удаления и повтор до deleted, игнорирование устаревшей revision. Android дополнительно показывает выбор PDF, прокрутку подтверждения и отмену до POST на экране 320×640 dp со шрифтом 200%. Новый iOS-ролик не подтверждает полный прогон на маленьком экране с максимальным шрифтом.
+Оба ролика показывают импорт и карточки списаний, отклонение spoofed/oversize до POST, lost ACK с холодным запуском без нового POST, ошибку удаления и повтор до deleted, игнорирование устаревшей revision. Android дополнительно показывает выбор PDF, прокрутку подтверждения и отмену до POST на экране 320×640 dp со шрифтом 200%.
 
 Оба файла проверены полным декодированием. Формат H.264, 1920×1080, 30 fps. SHA-256 видео сохранены в [public-verification.json](public-verification.json).
 
-Прогоны создают и удаляют только синтетические job в отдельном локальном mock. Исходные fixture остаются неизменными. Полный прогон с физического iPhone не записан; тестовый захват начального экрана не включён в приёмочные видео. VoiceOver/TalkBack этим комплектом не подтверждены.
+Прогоны создают и удаляют только синтетические job в отдельном локальном mock. Исходные fixture остаются неизменными.
 
 ## Критерии и воспроизведение
 

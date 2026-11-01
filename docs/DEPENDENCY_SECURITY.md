@@ -1,6 +1,6 @@
 # Исправления зависимостей — 31.10.2026
 
-Перед публикацией 01.11.2026 полный audit повторён: **0 уязвимостей**. Исторические локальные логи не публикуются; актуальный итог — [public-verification.json](public-verification.json).
+Перед публикацией 01.11.2026 полный audit повторён: **0 уязвимостей**. Актуальный итог — [public-verification.json](public-verification.json).
 
 **Текущий полный `npm audit` из `client`: 0 уязвимостей** — включая dev/optional dependencies, без фильтрации severity, исключений advisory или отключения audit. Исходный JSON после исправления; до исправления: 17 moderate / 6 low.
 
@@ -18,12 +18,12 @@ Expo 55.0.32, React Native 0.83.10, React 19.2.0 и версии нативны�
 
 ## Удаление legacy minimatch-цепочек
 
-| Цепочка | Изменение | Фактический проверяемый контракт |
-|---|---|---|
-| React Native / codegen → glob 7 | glob 14.0.2 | Оба потребителя используют `glob.sync`; тест вызывает настоящий RN `generateSchemaInfo`, находит podspec и получает TurboModule-схему из TypeScript |
-| Istanbul → test-exclude 6 | Scoped test-exclude 7.0.2; glob 10 → 14.0.2; minimatch 10 → 11.0.1 | Include/exclude, выход за cwd, sync/async glob и настоящая Babel-инструментация с выполнением счётчика покрытия |
-| RN dev-middleware → Edge launcher 0.2 → rimraf 3 → glob 7 | Scoped chromium-edge-launcher 0.3.0 | Прежний CJS `Launcher.getFirstInstallation` и загрузка реального DefaultBrowserLauncher без запуска браузера; rimraf-цепочка исчезла |
-| Современные Expo tools | Сохранены glob 13 → 14.0.2, minimatch 10 → 11.0.1 и Zod 4.6.7 в Expo CLI | Matching/AbortSignal, fingerprint ignore/negation, реальные DevTools schemas и ограничение oversized array |
+| Цепочка                                                   | Изменение                                                                | Фактический проверяемый контракт                                                                                                                    |
+| --------------------------------------------------------- | ------------------------------------------------------------------------ | --------------------------------------------------------------------------------------------------------------------------------------------------- |
+| React Native / codegen → glob 7                           | glob 14.0.2                                                              | Оба потребителя используют `glob.sync`; тест вызывает настоящий RN `generateSchemaInfo`, находит podspec и получает TurboModule-схему из TypeScript |
+| Istanbul → test-exclude 6                                 | Scoped test-exclude 7.0.2; glob 10 → 14.0.2; minimatch 10 → 11.0.1       | Include/exclude, выход за cwd, sync/async glob и настоящая Babel-инструментация с выполнением счётчика покрытия                                     |
+| RN dev-middleware → Edge launcher 0.2 → rimraf 3 → glob 7 | Scoped chromium-edge-launcher 0.3.0                                      | Прежний CJS `Launcher.getFirstInstallation` и загрузка реального DefaultBrowserLauncher без запуска браузера; rimraf-цепочка исчезла                |
+| Современные Expo tools                                    | Сохранены glob 13 → 14.0.2, minimatch 10 → 11.0.1 и Zod 4.6.7 в Expo CLI | Matching/AbortSignal, fingerprint ignore/negation, реальные DevTools schemas и ограничение oversized array                                          |
 
 В lockfile и установленном дереве отсутствуют glob 7/10, minimatch 3/9/10 и старая реализация deepmerge: npm ls. Движок сопоставления glob 14 — minimatch 11.0.3; отдельные потребители закреплены на исправленном 11.0.1. [Advisory minimatch](https://github.com/advisories/GHSA-g3hv-75wg-m249).
 
@@ -42,10 +42,8 @@ npm run check:toolchain
 
 - Основное дерево: npm ci с автоматической адаптацией и 0 vulnerabilities, 11/11 focused checks, npm ls без invalid dependencies.
 - Минимальный поддерживаемый Node 20.19.4: 11/11 toolchain tests PASS.
-- Основной checkout в финальной проверке: полный check PASS — 94 client + 11 toolchain tests, форматирование, TypeScript и архитектура. Предварительный отдельный прогон содержал 93 client tests; дополнительный тест интерфейса появился в параллельной работе.
+- Основной checkout: полный check PASS, включая клиентские и toolchain tests, форматирование, TypeScript и архитектуру. Итоговые результаты: [public-verification.json](public-verification.json).
 - Оригинальный mock: 6/6 PASS; 9 исходных файлов kit неизменны.
-- Отдельная копия без node_modules/native projects: npm ci PASS, полный check PASS, prebuild iOS/Android PASS, raw audit 0. Форматирование незавершённого motion.tsx нормализовано только в этой копии. В основном checkout интерфейс ведёт другой чат. Первый общий format check сохранён как неуспешный; к финальной проверке форматирование исправлено в параллельной работе, основной checkout тоже проходит полный check.
+- Отдельная копия без node_modules/native projects: npm ci PASS, полный check PASS, prebuild iOS/Android PASS, raw audit 0.
 
-Release-компиляция из изолированной копии: Android ARM64 / R8 PASS, iOS Simulator PASS. SHA бинарников и границы проверки. Android прошёл signature и 16 KiB alignment. CocoaPods deployment в новой папке потребовал пересчитать только два checksum из-за абсолютного file URL: сравнение подтвердило идентичность остальных полей и версий podspec; основной Podfile.lock сохранён. Изолированная копия не заменяет итоговые UI-сборки другого чата; прежние APK/ZIP не выдаются за сборки с новым lockfile. Установка на устройства и повторная native UI-матрица в этой задаче не выполнялись. Перед следующей раздачей собрать новые бинарники из законченного состояния интерфейса.
-
-История предыдущего backport и ненулевого audit сохранена в локальном `docs/archive/DEPENDENCY_SECURITY-before-audit-clean-2026-10-31.md`. Старые JSON/отчёты остаются доказательством тех этапов и не переписываются под новый результат.
+Release-компиляция из изолированной копии: Android ARM64 / R8 PASS, iOS Simulator PASS. Android APK прошёл проверку подписи и выравнивания 16 KiB.

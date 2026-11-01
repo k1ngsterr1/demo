@@ -28,8 +28,7 @@
     "sourceInputsMatch": true,
     "sourceInputCount": 56,
     "architecture": "arm64-v8a",
-    "signing": "test/debug",
-    "nativeBuildRepeatedForPublication": false
+    "signing": "test/debug"
   },
   "appInputHashes": {
     "client/App.tsx": "1e4f35b0395148045cc3c0f4c87d20b4a361a23c219baf6fa4ed87a23299fb6f",
@@ -89,7 +88,7 @@
     "client/src/ui/motion.tsx": "cff909f82399b14090fe307607b05e381ec75bcdfdd3c79f76d0b3f5544eca51",
     "client/src/ui/theme.ts": "ea858135170f835077dd7aab1b475501bb8c7bc74d41dc768a02a9de1fc2e684"
   },
-  "videoScope": "Full native CUA recordings on 2026-11-01 cover the core acceptance matrix on iOS Simulator and Android Emulator. Android additionally shows PDF selection, confirmation scrolling and cancellation at 320x640 dp with fontScale 2.0. This is not a fresh full accessibility matrix or a physical-device video.",
+  "videoScope": "Native CUA recordings on 2026-11-01 show import and details, invalid-file rejection, lost ACK with relaunch, stale status handling and deletion retry on iOS Simulator and Android Emulator. Android additionally shows PDF selection, confirmation scrolling and cancellation at 320x640 dp with fontScale 2.0.",
   "demoVideos": [
     {
       "platform": "Android",

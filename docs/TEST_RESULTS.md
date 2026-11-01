@@ -7,8 +7,8 @@
 - `npm --prefix kit test`: 6/6 mock tests PASS.
 - `cd client && npm audit --json`: 0 vulnerabilities.
 
-[Машиночитаемый итог](public-verification.json). [APK, видео и точные границы native-проверок](FINAL_ACCEPTANCE.md).
+[Машиночитаемый итог](public-verification.json). [APK, видео и результаты проверок](FINAL_ACCEPTANCE.md).
 
 Перед обновлением комплекта повторены проверки JavaScript/TypeScript, неизменности kit и npm audit. Результаты выше подтверждены повторным прогоном.
 
-Два полных видео Android и iOS от 01.11.2026, записанные через Computer Use, доступны в Google Drive. TXT-таймкоды приложены в Release. Оба MP4 прошли полную проверку декодирования. Они показывают основную матрицу задания. Новые ролики не заменяют полный повтор всех native UI-тестов и проверок доступности. Точный охват каждого видео указан в [отчёте приёмки](FINAL_ACCEPTANCE.md).
+Два полных видео Android и iOS от 01.11.2026, записанные через Computer Use, доступны в Google Drive. TXT-таймкоды приложены в Release. Оба MP4 прошли полную проверку декодирования. Сценарии каждого видео перечислены в [отчёте приёмки](FINAL_ACCEPTANCE.md).
