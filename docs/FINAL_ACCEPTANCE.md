@@ -15,9 +15,9 @@
 
 ## APK
 
-- [Android ARM64 Release](https://github.com/k1ngsterr1/demo/releases/download/v1.0.0/StatementImport-Android-Release-arm64-20261031T144355Z.apk), 21 676 363 байта; Android 7.0 / API 24+, target API 36.
+- [Android ARM64 Release](https://github.com/k1ngsterr1/demo/releases/download/v1.0.0/statement-import-android-arm64.apk), 21 676 363 байта; Android 7.0 / API 24+, target API 36.
 - SHA-256: `1c0e57871adcceab0775c761b2aede0e577d7c36f3fd5a8d114d4405dfe017f5`.
-- [R8 mapping](https://github.com/k1ngsterr1/demo/releases/download/v1.0.0/StatementImport-Android-Release-arm64-20261031T144355Z-mapping.txt.gz) и [файл SHA-256](https://github.com/k1ngsterr1/demo/releases/download/v1.0.0/StatementImport-Android-Release-arm64-20261031T144355Z.apk.sha256).
+- [R8 mapping](https://github.com/k1ngsterr1/demo/releases/download/v1.0.0/android-r8-mapping.txt.gz) и [файл SHA-256](https://github.com/k1ngsterr1/demo/releases/download/v1.0.0/statement-import-android-arm64.apk.sha256).
 - R8 и resource shrinking включены. Это тестовая debug-подпись; файл предназначен для проверки задания.
 - 56 отслеживаемых входных файлов приложения совпадают с зафиксированными входами этой сборки. Ранее проверены signature, 16 KiB alignment и установка/запуск этого APK на ARM64 Android 15 / API 35. При Git-публикации native-сборка и device matrix заново не запускались.
 
@@ -25,10 +25,10 @@
 
 Реальные записи Release-приложения, системного picker и локального HTTP mock. Действия выполнены через Computer Use. В монтаже сохранена скорость 1×, сокращены паузы, добавлены рамка и пояснения. Счётчики POST и ревизии показаны отдельно как диагностика mock.
 
-| Платформа                             | Полное видео                                                                   | Таймкоды                                                                                                          |
-| ------------------------------------- | ------------------------------------------------------------------------------ | ----------------------------------------------------------------------------------------------------------------- |
-| Android Emulator, Android 15 / API 35 | [3:52](https://drive.google.com/file/d/1mBM1orUnzbHBUSt_FnedM5aSCPQS0-rm/view) | [TXT](https://github.com/k1ngsterr1/demo/releases/download/v1.0.0/StatementImport-Android-Timecodes-20261101.txt) |
-| iPhone 16 Pro Max Simulator, iOS 26.4 | [2:51](https://drive.google.com/file/d/15o8xGI7Fy9xSRT5JNf8zjzyE60wqLRmA/view) | [TXT](https://github.com/k1ngsterr1/demo/releases/download/v1.0.0/StatementImport-iOS-Timecodes-20261101.txt)     |
+| Платформа                             | Полное видео                                                                   | Таймкоды                                                                                       |
+| ------------------------------------- | ------------------------------------------------------------------------------ | ---------------------------------------------------------------------------------------------- |
+| Android Emulator, Android 15 / API 35 | [3:52](https://drive.google.com/file/d/1mBM1orUnzbHBUSt_FnedM5aSCPQS0-rm/view) | [TXT](https://github.com/k1ngsterr1/demo/releases/download/v1.0.0/android-video-timecodes.txt) |
+| iPhone 16 Pro Max Simulator, iOS 26.4 | [2:51](https://drive.google.com/file/d/15o8xGI7Fy9xSRT5JNf8zjzyE60wqLRmA/view) | [TXT](https://github.com/k1ngsterr1/demo/releases/download/v1.0.0/ios-video-timecodes.txt)     |
 
 Оба ролика показывают импорт и карточки списаний, отклонение spoofed/oversize до POST, lost ACK с холодным запуском без нового POST, ошибку удаления и повтор до deleted, игнорирование устаревшей revision. Android дополнительно показывает выбор PDF, прокрутку подтверждения и отмену до POST на экране 320×640 dp со шрифтом 200%. Новый iOS-ролик не подтверждает полный прогон на маленьком экране с максимальным шрифтом.
 

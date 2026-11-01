@@ -23,7 +23,7 @@
     }
   },
   "apk": {
-    "file": "StatementImport-Android-Release-arm64-20261031T144355Z.apk",
+    "file": "statement-import-android-arm64.apk",
     "sha256": "1c0e57871adcceab0775c761b2aede0e577d7c36f3fd5a8d114d4405dfe017f5",
     "sourceInputsMatch": true,
     "sourceInputCount": 56,
