@@ -11,7 +11,7 @@ React Native + TypeScript, Expo development build. Импорт синтетич
 Нужны Node.js 20.19.4–20.x или 22+, npm. Для iOS — macOS, Xcode 26.2+ и CocoaPods; для Android — Android SDK 36 и JDK 17. Первая установка и сборка требуют интернета. Expo/EAS аккаунт не нужен.
 
 ```sh
-git clone --branch codex/demo https://github.com/k1ngsterr1/demo.git
+git clone --branch demo https://github.com/k1ngsterr1/demo.git
 cd demo
 npm --prefix client ci
 npm run verify:kit
