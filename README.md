@@ -2,9 +2,9 @@
 
 React Native + TypeScript, Expo development build. Импорт синтетической PDF/CSV выписки через локальный HTTP mock: выбор файла → подтверждение → обработка → два регулярных списания → удаление.
 
-[APK и видео](https://github.com/k1ngsterr1/demo/releases/tag/v1.0.0) · [Результаты проверок](docs/FINAL_ACCEPTANCE.md) · [Release note](docs/RELEASE_NOTES.md) · [Self-review](docs/SELF_REVIEW.md)
+[APK](https://github.com/k1ngsterr1/demo/releases/tag/v1.0.0) · [Результаты проверок](docs/FINAL_ACCEPTANCE.md) · [Release note](docs/RELEASE_NOTES.md) · [Self-review](docs/SELF_REVIEW.md)
 
-Полные видео: [Android, 3:52](https://github.com/k1ngsterr1/demo/releases/download/v1.0.0/StatementImport-Android-Demo-20261101.mp4) · [iOS, 2:51](https://github.com/k1ngsterr1/demo/releases/download/v1.0.0/StatementImport-iOS-Demo-20261101.mp4).
+Полные видео: [Android, 3:52](https://drive.google.com/file/d/1mBM1orUnzbHBUSt_FnedM5aSCPQS0-rm/view) · [iOS, 2:51](https://drive.google.com/file/d/15o8xGI7Fy9xSRT5JNf8zjzyE60wqLRmA/view).
 
 ## Запуск из чистой копии
 
